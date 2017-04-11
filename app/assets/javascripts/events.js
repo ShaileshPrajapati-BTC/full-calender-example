@@ -36,7 +36,14 @@ Event.Calender = {
         },
         events: '/events.json',
         eventColor: '#378006',
-        eventTextColor: '#fff'
+        eventTextColor: '#fff',
+        eventLimit: true,
+            views: {
+            month: {
+                eventLimit: 4 // adjust to 6 only for agendaWeek/agendaDay
+            }
+        },
+        eventLimitText: "More"
       });
       $('.fc-day').on('click',function(){
           // alert($(this).data('date'));
