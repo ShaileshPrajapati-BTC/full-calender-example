@@ -31,8 +31,7 @@ class EventsController < ApplicationController
         format.html { redirect_to events_url, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
-        format.html { render :new }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        format.html { redirect_to events_url, notice: 'Please fill all details.' }
       end
     end
   end
